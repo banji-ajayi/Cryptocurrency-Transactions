@@ -1,0 +1,19 @@
+/* :host { */
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* margin: 10px; */
+    /* margin-bottom: 20px; */
+    /* background-color: #eee; */
+    /* border: solid 4px black; */
+    /* border: 1px solid #ccc; */
+    /* align-items: flex-start; */
+/* } */
+
+:host {
+    display: flex;
+    flex-direction: column;
+    /* margin: 10px; */
+    /* margin-bottom: 20px; */
+    background-color: #eee;
+    /* border: 1px solid #ccc;*/
+}

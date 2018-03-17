@@ -1,0 +1,63 @@
+
+<table>
+  <tbody>
+<tr *screenLarge class="group">
+  <!-- <div class="index">
+    <span>{{ index }}</span>
+  </div> -->
+
+  <td style="width: 300px">
+    <img  [src]="'/assets/' + cryptocurr.name + '.jpg'" [alt]="cryptocurr.name">
+  </td>
+  <!-- <td >
+    <span>{{ cryptocurr.name }}</span>
+  </td> -->
+
+  <td  style="width: 250px" >
+      <span>{{ cryptocurr.epiIndex }}</span>
+    </td>
+
+  <!-- <article class="content-article">
+    <h1>Main Content</h1>
+</article>
+<aside class="content-sidebar">
+    <h1>Sidebar</h1>
+</aside> -->
+
+  <td style="width: 250px" >
+    <span>{{ cryptocurr.epiIndex }}</span>
+  </td>
+
+</tr>
+  </tbody>
+</table>
+
+
+
+
+<table>
+<tbody>
+<tr *screenBelowLarge class="group-small">
+<!-- <div class="title-group-small"> -->
+<!-- <div class="index-small">
+  <span>{{ index }}</span>
+</div> -->
+
+<!-- </div> -->
+<td>
+<img class="cryptocurr-image-small" [src]="'/assets/' + cryptocurr.name + '.jpg'" [alt]="cryptocurr.name">
+</td>
+
+<td class="cryptocurr-name-small">
+    <span>{{ cryptocurr.epiIndex }}</span>
+  </td>
+
+<td class="epi-index-small">
+<span>{{ cryptocurr.epiIndex }}</span>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+

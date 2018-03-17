@@ -1,0 +1,67 @@
+
+/* .image-holder {
+    flex-grow: 1;
+    background-image: url(/assets/Germany.jpg);
+    background-position:  center center;
+    background-size: cover;
+    height: 150px;
+}
+
+span {
+    color: white;
+    font-size: 36px;
+}
+
+.title {
+    background-color: rgba(50,50,50,0.5);
+    text-align: center;
+} */
+
+.welcome_title{
+font-size: 18px;
+font-weight:bolder;
+/* margin-left:-15px; */
+}
+
+.welcome_comments{
+  font-size:12px;
+
+}
+
+.testify {
+  /* background-color: rgba(75, 182, 42, 0.5); */
+  /* text-align: center; */
+  display:flex;
+ flex-grow: 1;
+ width: 290px;
+ height:150px;
+ margin-top: 17px;
+ margin-right: 6em;
+ font-size: 1.1rem;
+ line-height: 2;
+ border-radius: 10px;
+ border: 2px;
+
+ /* background-image: linear-gradient(to bottom right, #FFFFFF, #ddd); */
+ /* box-shadow: 1px 1px 1px #FFFFFF,
+             inset 2px 3px 5px rgb(255, 255, 255),
+             inset -2px -3px 5px rgb(255, 255, 255); */
+
+}
+
+.testify2 {
+  /* text-align: center; */
+  display:flex;
+ flex-grow: 1;
+ width: 220px;
+ height:200px;
+ margin-top: 17px;
+ margin-right: 6em;
+ /* margin-left:10px; */
+ font-size: 1.1rem;
+ line-height: 2;
+ border-radius: 10px;
+ border: none;
+
+}
+

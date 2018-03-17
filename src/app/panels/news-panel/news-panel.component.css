@@ -1,0 +1,72 @@
+
+/* .image-holder {
+    flex-grow: 1;
+    background-image: url(/assets/Germany.jpg);
+    background-position:  center center;
+    background-size: cover;
+    height: 150px;
+    flex-direction: column;
+} */
+
+span {
+    color: #020000;
+    font-size:14px;
+    /* font-weight: bold; */
+}
+
+.news_title{
+  font-size: 18px;
+  font-weight:bolder;
+  margin-left: 2px;
+  /* margin-left:-15px; */
+  }
+
+  .news_comments{
+    font-size:12px;
+    margin-left: 2px;
+
+  }
+
+
+.news {
+    /* background-color: #D5DEE6; */
+    /* opacity:0.5; */
+    display:flex;
+    flex-grow: 1;
+    width: 250px;
+    height:300px;
+    margin-top: 15px;
+    margin-right: 6em;
+    font-size: 1.1rem;
+    line-height: 2;
+    border-radius: 10px;
+    border: none;
+    /* border-style: solid;
+    border-color: #008CFF; */
+
+    /* background-image: linear-gradient(to bottom right, #FFFFFF, #ddd);
+    box-shadow: 1px 1px 1px #FFFFFF,
+                inset 2px 3px 5px rgb(255, 255, 255),
+                inset -2px -3px 5px rgb(255, 255, 255); */
+    /* height:160px;
+    margin-top: 60px;
+    -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+    box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform:rotate(-3deg);
+    -moz-transform:rotate(-3deg);
+    -ms-transform:rotate(-3deg);
+    -o-transform:rotate(-3deg);
+    transform:rotate(-3deg); */
+
+}
+
+.news2 {
+  background-color: rgba(98, 182, 42, 0.5);
+  /* text-align: center; */
+  display:flex;
+  /* align-content: stretch; */
+  flex-grow: 1;
+
+}
+

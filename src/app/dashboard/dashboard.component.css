@@ -1,0 +1,21 @@
+:host {
+    /* flex-basis: auto; */
+    display:flex;
+    flex-direction:column;
+    /* flex-grow:1; */
+    flex-wrap: wrap;
+    align-content: space-between;
+    /* margin-right: 10px; */
+
+
+    /* border: solid 4px black; */
+}
+
+.within{
+  display:flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: wrap;
+
+
+}

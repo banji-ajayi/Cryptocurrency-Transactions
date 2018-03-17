@@ -1,0 +1,37 @@
+<div [hidden]="operation === 'create' && field.isId" [formGroup]="form">
+    <div  class="col-sm-7">
+  <div [ngSwitch]="field.type">
+
+    <div *ngSwitchCase="'string'" class="form-group">
+
+      <label [htmlFor]="field.key">{{ field.label }} </label>
+      <input class="form-control" [formControlName]="field.key" [id]="field.key"
+              [readonly]="operation == 'details' || field.isId">
+    </div>
+
+    <div *ngSwitchCase="'number'" class="form-group">
+      <label [htmlFor]="field.key">{{ field.label }}</label>
+      <input class="form-control" [formControlName]="field.key" [id]="field.key"
+              [readonly]="operation == 'details' || field.isId"
+              type="number">
+    </div>
+
+    <div *ngIf="form.get(field.key).hasError('required') && (submitted || form.get(field.key).touched)"
+          class="alert alert-danger">
+      {{ field.label }} is required.
+    </div>
+
+  </div>
+  </div>
+</div>
+
+<!--
+<div class="form-group">
+  <label for="accountNumber" class="col-sm-4 control-label" >E-Currency Account No.</label>
+<div  class="col-sm-8">
+  <input #accountNumber="ngModel" pattern="^[0-9]*$" type ="text" class="form-control" required  name="accountNumber" id="accountNumber"
+[(ngModel)]="model.accountNumber">
+</div>
+<div class="col-sm-offset-4 col-sm-8">
+<div *ngIf="accountNumber.invalid && accountNumber.dirty" class="alert alert-danger" >
+ Account Number is required (enter digits). -->

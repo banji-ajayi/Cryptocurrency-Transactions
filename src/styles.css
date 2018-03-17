@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.user-title-bar{ 
+    /* background-color: red; */
+    padding-bottom: 20px;
+    /* height: 100px; */
+    /* margin-top: 20px; */
+ }

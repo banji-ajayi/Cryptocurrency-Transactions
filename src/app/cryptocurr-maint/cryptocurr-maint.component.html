@@ -1,0 +1,44 @@
+<h3>Currency Maintenance</h3>
+<button class="btn btn-primary" (click)="createCryptocurr()">Add New Currency</button>
+<table>
+  <thead>
+  <tr>
+    <th style="width: 25px">id</th>
+    <th style="width: 210px">E-Currency</th>
+    <th style="width: 120px">Buy</th>
+    <th style="width: 120px">Sell</th>
+    <th style="min-width: 280px"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let row of cryptocurrs">
+    <td>{{ row.id }}</td>
+    <td>{{ row.name }}</td>
+    <td>{{ row.epiIndex }}</td>
+    <td>{{ row.epiIndex }}</td>
+    <td *ngIf="row.id != deleteid">
+      <button class="btn btn-sm btn-primary"
+        (click)="showCryptocurrDetail(row.id)">
+          Details
+      </button>
+      <button class="btn btn-sm btn-warning"
+        (click)="editCryptocurr(row.id)">
+          Edit
+      </button>
+      <button class="btn btn-sm btn-danger"
+        (click)="deleteCryptocurrQuestion(row.id)">
+          Delete
+      </button>
+    </td>
+    <td *ngIf="row.id === deleteid && !isDeleting">
+      Delete this currency?
+      <button class="btn btn-sm" (click)="cancelDelete()">Cancel</button>
+      <button class="btn btn-sm btn-danger" (click)="deleteCryptocurr(row.id)">Delete</button>
+      <p *ngIf="deleteError">{{ deleteError }}</p>
+    </td>
+    <td *ngIf="row.id === deleteid && isDeleting">
+      Deleting...
+    </td>
+  </tr>
+  </tbody>
+</table>

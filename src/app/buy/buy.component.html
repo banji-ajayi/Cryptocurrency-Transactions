@@ -1,0 +1,179 @@
+<h3 *ngIf="currency.length == 0">Loading...</h3>
+<div class="container" *ngIf="currency.length > 0 ">
+
+
+    <div id="mainContent" class=col-sm-8>
+        <h3>Buy Currency</h3>
+<form #form="ngForm" (submit)="submitForm(form)" novalidate class="form-horizontal">
+
+    <div class="form-group" [class.has-error]="hasMyEcurrencyError">
+        <label for="myECurrency" class="col-sm-4 control-label">Select E-Currency</label>
+        <div  class="col-sm-6">
+        <select #myECurrency="ngModel" class="form-control"
+        name="myECurrency" id="myECurrency"
+        (blur)="validateMyECurrency(myECurrency.value)"
+        (change)="validateMyECurrency(myECurrency.value)"
+        [(ngModel)]="model.myECurrency">
+          <!-- note, the currency can be loaded from data service...like from a database service -->
+          <option value="default">Select E-Currency...</option>
+          <option *ngFor="let curr of currency">
+              {{ curr }}
+
+            </option>
+
+        </select>
+      </div>
+      </div>
+
+
+
+  <div class="form-group" [class.has-error]="AmountE.invalid && AmountE.dirty">
+    <label for="AmountE" class="col-sm-4 control-label">Amount</label>
+  <div class="col-sm-4">
+    <input #AmountE="ngModel" pattern="^[. 0-9]*$" type ="text" class="form-control" required  name="AmountE" id="AmountE"
+        [(ngModel)]="model.AmountE">
+  </div>
+  <div class="col-sm-offset-4 col-sm-4">
+        <div *ngIf="AmountE.invalid && AmountE.dirty" class="alert alert-danger" >
+          E-Currency amount is required(enter digits).
+        </div>
+        </div>
+        <!-- (update)="updateCountry($event)" -->
+  </div>
+
+  <div class="form-group" [class.has-error]="hasMyEcurrencyError">
+      <label for="paymentMode" class="col-sm-4 control-label">Payment mode</label>
+      <div  class="col-sm-6">
+      <select #paymentMode="ngModel" class="form-control"
+      name="paymentMode" id="paymentMode"
+      (blur)="validatePaymentMode(paymentMode.value)"
+      (change)="validatePaymentMode(paymentMode.value)"
+      [(ngModel)]="model.paymentMode">
+        <!-- note, the currency can be loaded from data service...like from a database service -->
+        <option value="defaultPay">Select Payment Mode...</option>
+        <option *ngFor="let payMode of modes">
+            {{ payMode }}
+
+          </option>
+
+      </select>
+    </div>
+    </div>
+
+
+   <div class="form-group">
+      <label for="accountName" class="col-sm-4 control-label" >E-Currency Account Name</label>
+    <div  class="col-sm-8">
+      <input #accountName="ngModel" pattern="^[- A-Za-z]*$" type ="text" class="form-control" required  name="accountName" id="accountName"
+    [(ngModel)]="model.accountName">
+    </div>
+    <div class="col-sm-offset-4 col-sm-8">
+    <div *ngIf="accountName.invalid && accountName.dirty" class="alert alert-danger" >
+      Account name is required (enter valid characters).
+    </div>
+    </div>
+    </div>
+
+    <div class="form-group">
+        <label for="accountNumber" class="col-sm-4 control-label" >E-Currency Account No.</label>
+      <div  class="col-sm-8">
+        <input #accountNumber="ngModel" pattern="^[0-9]*$" type ="text" class="form-control" required  name="accountNumber" id="accountNumber"
+      [(ngModel)]="model.accountNumber">
+      </div>
+      <div class="col-sm-offset-4 col-sm-8">
+      <div *ngIf="accountNumber.invalid && accountNumber.dirty" class="alert alert-danger" >
+       Account Number is required (enter digits).
+      </div>
+      </div>
+      </div>
+
+      <div class="form-group">
+          <label for="confirmAccountNumber" class="col-sm-4 control-label" >Confirm E-Currency Account No.</label>
+        <div  class="col-sm-8">
+          <input #confirmAccountNumber="ngModel" pattern="^[0-9]*$" type ="text" class="form-control" required  name="confirmAccountNumber" id="confirmAccountNumber"
+        [(ngModel)]="model.confirmAccountNumber">
+        </div>
+        <div class="col-sm-offset-4 col-sm-8">
+        <div *ngIf="confirmAccountNumber.invalid && confirmAccountNumber.dirty" class="alert alert-danger" >
+         Account number is required (enter digits).
+        </div>
+        </div>
+        </div>
+
+        <div class="form-group">
+            <label for="info" class="col-sm-4 control-label" >Additional Info.</label>
+          <div  class="col-sm-8">
+            <input #info="ngModel"  type ="text" class="form-control" required  name="info" id="info"
+          [(ngModel)]="model.info">
+          </div>
+          </div>
+
+    <!-- <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="is-full-time"
+         [(ngModel)]="model.isFullTime"> Full Time Coder
+     </label>
+    </div>
+     </div>
+    </div> -->
+
+     <!-- for radio buttons, each button in the form must have the same name with the [(ngModel attribute)] -->
+     <!-- <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+    <label>Payment Type</label>
+    <div class="radio">
+      <label>
+        <input type="radio" name="paymentType" value="fly-wire" checked
+        [(ngModel)]="model.paymentType">
+        flywire
+      </label>
+      </div>
+    <div class="radio">
+        <label>
+          <input type="radio" name="paymentType" value="visa card"
+          [(ngModel)]="model.paymentType">
+          visa card
+        </label>
+      </div>
+
+ </div>
+ </div> -->
+
+
+       <!-- <div class="form-group">
+            <label >Date Hired</label>
+    aba      <input  type ="date" class="form-control" >
+          </div> -->
+
+  <!-- <button class ="btn btn-primary" type="submit">Submit</button>
+</form>
+</div> -->
+
+<!-- The below is for a sample placeholder -->
+<!-- <div class="container">
+    <h3>Buy Currency</h3>
+    <form #form="ngForm" novalidate>
+      <div class="form-group">
+        <label for="AmountEId">First name</label>
+      <input id="AmountEId" type ="text" class="form-control" required  name="AmountE" ngModel>
+      </div>
+      Note: the code below was use in first name to upper, it was the syntax used to call the function
+    <input #firstName="ngModel" pattern="^[- A-Za-z]*$" type ="text" class="form-control" required  name="firstName" id="firstName"
+        [(ngModel)]="model.firstname"
+        (ngModelChange)="firstNameEToUpperCase($event)">
+  </div>
+    -->
+      <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-8">
+      <button class ="btn btn-primary" type="submit" [disabled]="form.invalid">Submit</button>
+          </div>
+      </div>
+    </form>
+    <!-- Model: {{ model | json }}
+    Angular: {{ form.value | json }} -->
+    <!-- <h3>{{ form.valid}}</h3> -->
+    </div>
+    <div id="leftSide" class=col-sm-4></div>
+</div>

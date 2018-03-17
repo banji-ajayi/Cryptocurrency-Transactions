@@ -1,0 +1,11 @@
+<h3>Currency</h3>
+
+<fw-dynamic-form
+  [vm]="cryptocurr"
+  [vmDefinition]="cryptocurrDefinition"
+  [operation]="operation"
+  [errorMessage]="errorMessage"
+  (update)="updateCryptocurr($event)"
+  (create)="createCryptocurr($event)"
+>
+</fw-dynamic-form>

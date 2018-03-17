@@ -1,0 +1,23 @@
+<div class ="mainpage">
+    <table>
+        <thead>
+        <tr>
+          <th style="width: 150px">E-Currency</th>
+          <th style="width: 100px">Buy</th>
+          <th style="width: 100px">Sell</th>
+          <!-- <th style="min-width: 100px"></th> -->
+        </tr>
+        </thead>
+      </table>
+<fw-panel *ngFor="let cryptocurr of cryptocurrs; let i=index">
+  <!-- <div class="projected-title">Country</div> -->
+  <app-cryptocurr-panel [cryptocurr]="cryptocurr" [index]="i+1">
+  </app-cryptocurr-panel>
+
+
+
+</fw-panel>
+<!-- <app-news-panel>
+  </app-news-panel> -->
+
+</div>
